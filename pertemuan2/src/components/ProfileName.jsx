@@ -1,10 +1,10 @@
-export default function ProfileName() {
-  const name = "Abdul Batagor";
-  const profesi = "Tambal Ban"
+export default function ProfileName({ name, profesi = 'Tukang Batagor'}) {
   return (
-    <div className="flex flex-col items-center">
-        <h1 className="text-7xl text-white  ">{name}</h1>;
-        <p className="text-3xl text-white">{profesi}</p>
+    <div class="space-y-2 text-center sm:text-left">
+      <div class="space-y-0.5">
+        <p class="text-lg font-semibold text-black">{name}</p>
+        <p class="font-medium text-gray-500">{profesi}</p>
+      </div>
     </div>
-  )
+  );
 }

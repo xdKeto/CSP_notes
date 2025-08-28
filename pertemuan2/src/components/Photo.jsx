@@ -1,3 +1,4 @@
 export default function Photo() {
-  return <img src="menengo.jpg" alt="" className="rounded-full w-72 h-72" />;
+  
+  return <img class="mx-auto block h-24 rounded-full sm:mx-0 sm:shrink-0" src="menengo.jpg" alt="" />
 }
