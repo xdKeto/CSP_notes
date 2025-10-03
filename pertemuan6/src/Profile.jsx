@@ -1,31 +1,26 @@
 import { useState } from "react";
 
-const Profile = () => {
-  const [profile, setProfile] = useState({ nama: "Yesto", email: "yesto@gmail" });
-
-  return (
-    <>
-      <div>
-        <h1>Profile</h1>
-        <Biodata profile={profile}>
-          <Email email={profile.email} />
-        </Biodata>
-      </div>
-    </>
-  );
-};
-
-function Biodata({ profile, children }) {
-  return (
-    <>
-      <p>Nama: {profile.nama}</p>
-      {children}
-    </>
-  );
+export default function Profile(){
+    const [profil, setProfil] = useState({nama:'Andi', email:'andi@gmail.com'});
+    return (
+        <>
+            <h1>Profile Page</h1>
+            <Biodata profil={profil}>
+                <Email email={profil.email}/>
+            </Biodata>
+        </>
+    );
 }
 
-function Email({ email }) {
-  return <p>Email: {email}</p>;
+function Biodata({profil,children}){
+    return (
+        <>
+            <p>Nama: {profil.nama}</p>
+            {children}
+        </>
+    );
 }
 
-export default Profile;
+function Email({ email}){
+    return <p>Email: {email}</p>
+}
